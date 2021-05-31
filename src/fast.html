@@ -1,0 +1,365 @@
+<template>
+  <style>
+    fast-design-system-provider {
+      display: inline-block;
+      color: var(--neutral-foreground-rest);
+    }
+  
+    fast-card {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    h2 {
+      font-size: var(--type-ramp-plus-5-font-size);
+      line-height: var(--type-ramp-plus-5-line-height);
+    }
+  
+    fast-card > fast-button{
+      align-self: flex-end;
+    }
+  </style>
+<h1>${message}</h1>
+<div class="p-6">
+
+  <fast-design-system-provider use-defaults>
+
+    <my-element></my-element>
+
+    <fast-card>
+      <h2>${message}</h2>
+      <fast-button appearance="accent" click.trigger="onClick()">Click Me</fast-button>
+    </fast-card>
+  </fast-design-system-provider>
+</div>
+<div class="p-6">
+  <fast-design-system-provider use-defaults>
+    <fast-accordion>
+        <fast-accordion-item expanded>
+            <span slot="heading">Panel one</span>
+       
+            Panel one content
+           <ul>
+<li>111</li>
+<li>222</li>
+<li>333</li>
+
+           </ul>
+        </fast-accordion-item>
+        <fast-accordion-item>
+            <span slot="heading">Panel two</span>
+            Panel two content
+        </fast-accordion-item>
+        <fast-accordion-item expanded>
+            <span slot="heading">Panel three</span>
+            Panel three content
+        </fast-accordion-item>
+    </fast-accordion>
+</fast-design-system-provider>
+</div>
+<div class="p-6">
+<fast-design-system-provider use-defaults>
+  <fieldset>
+      <legend>Fruits</legend>
+      <fast-checkbox checked>Apple</fast-checkbox>
+      <fast-checkbox checked>Banana</fast-checkbox>
+      <fast-checkbox>Honeydew</fast-checkbox>
+      <fast-checkbox checked>Mango</fast-checkbox>
+  </fieldset>
+</fast-design-system-provider>
+</div>
+
+<div class="p-6">
+
+</div>
+<div class="p-6">
+  <fast-dialog id="example1" class="example-dialog" aria-label="Simple modal dialog" modal="true" hidden>
+    <h2>Dialog</h2>
+    <p>This is an example dialog.</p>
+    <fast-button>Close Dialog</fast-button>
+  </fast-dialog>
+</div>
+<div class="p-6">
+  <fast-design-system-provider use-defaults>
+    <label id="preferred-format">Preferred Format:</label><br />
+    <fast-listbox aria-labelledby="preferred-format" name="preferred-format">
+        <fast-option value="vinyl">Vinyl Record</fast-option>
+        <fast-option value="casette">Casette</fast-option>
+        <fast-option value="cd">Compact Disc</fast-option>
+        <fast-option value="digital">Digital</fast-option>
+    </fast-listbox>
+</fast-design-system-provider>
+</div>
+<div class="p-6">
+  <fast-design-system-provider use-defaults>
+    <fast-menu>
+        <fast-menu-item>Menu item 1</fast-menu-item>
+        <fast-menu-item>Menu item 2</fast-menu-item>
+        <fast-menu-item>Menu item 3</fast-menu-item>
+        <fast-divider></fast-divider>
+        <fast-menu-item role="menuitemradio">Menu item 4</fast-menu-item>
+        <fast-menu-item role="menuitemradio">Menu item 5</fast-menu-item>
+    </fast-menu>
+</fast-design-system-provider>
+</div>
+<div class="p-6">
+  <fast-design-system-provider use-defaults>
+    <fast-number-field appearance="filled" min="0" max="10"></fast-number-field>
+</fast-design-system-provider>
+</div>
+<div class="p-6">
+  <fast-design-system-provider use-defaults>
+    <fast-progress min="0" max="100" value="75"></fast-progress>
+</fast-design-system-provider>
+</div>
+<div class="p-6">
+  <fast-design-system-provider use-defaults>
+      <fast-radio value="mango" required>Mango</fast-radio>
+  </fast-design-system-provider>
+  </div>
+<div class="p-6">
+  <fast-design-system-provider use-defaults>
+    <label id="radiogroup">Preset selected-value</label>
+    <fast-radio-group value="maverick" aria-labelledby="radiogroup" name="best-pilot">
+        <fast-radio value="ice-man">Ice Man</fast-radio>
+        <fast-radio value="maverick">Maverick</fast-radio>
+        <fast-radio value="viper">Viper</fast-radio>
+        <fast-radio value="jester">Jester</fast-radio>
+    </fast-radio-group>
+</fast-design-system-provider>
+</div>
+
+
+<div class="p-6">
+  <fast-design-system-provider use-defaults>
+    <fast-slider min="0" max="100" step="10" value="70">
+        <fast-slider-label
+            position="0"
+        >
+            0
+        </fast-slider-label>
+        <fast-slider-label
+            position="10"
+        >
+            10
+        </fast-slider-label>
+        <fast-slider-label
+            position="90"
+        >
+            90
+        </fast-slider-label>
+        <fast-slider-label
+            position="100"
+        >
+            100
+        </fast-slider-label>
+    </fast-slider>
+</fast-design-system-provider>
+</div>
+<div class="p-6">
+  <fast-design-system-provider use-defaults>
+    <fast-slider min="0" max="100" step="10" value="70">
+        <fast-slider-label
+            position="0"
+        >
+            0
+        </fast-slider-label>
+        <fast-slider-label
+            position="10"
+        >
+            10
+        </fast-slider-label>
+        <fast-slider-label
+            position="90"
+        >
+            90
+        </fast-slider-label>
+        <fast-slider-label
+            position="100"
+        >
+            100
+        </fast-slider-label>
+    </fast-slider>
+</fast-design-system-provider>
+</div>
+<div class="p-6">
+  <fast-design-system-provider use-defaults>
+    <fast-slider-label>Fast</fast-slider-label>
+</fast-design-system-provider>
+</div>
+<div class="p-6">
+  <fast-design-system-provider use-defaults>
+    <fast-switch>
+        Theme
+        <span slot="checked-message">Dark</span>
+        <span slot="unchecked-message">Light</span>
+    </fast-switch>
+</fast-design-system-provider>
+</div>
+
+<div class="p-6">
+  <fast-design-system-provider use-defaults>
+    <fast-tabs activeId="entrees">
+        <fast-tab id="apps">Appetizers</fast-tab>
+        <fast-tab id="entrees">Entrees</fast-tab>
+        <fast-tab id="desserts">Desserts</fast-tab>
+        <fast-tab-panel id="appsPanel">
+            <ol>
+                <li><fast-anchor href="#" appearance="hypertext">Stuffed artichokes</fast-anchor></li>
+                <li><fast-anchor href="#" appearance="hypertext">Bruschetta</fast-anchor></li>
+                <li><fast-anchor href="#" appearance="hypertext">Oven-baked polenta</fast-anchor></li>
+                <li><fast-anchor href="#" appearance="hypertext">Salami and Fig Crostini with Ricotta</fast-anchor></li>
+                <li><fast-anchor href="#" appearance="hypertext">Rosemary-Potato Focaccia with Goat Cheese</fast-anchor></li>
+            </ol>
+        </fast-tab-panel>
+        <fast-tab-panel id="entreesPanel">
+            <ol>
+                <li><fast-anchor href="#" appearance="hypertext">Mushroom-Sausage Ragù</fast-anchor></li>
+                <li><fast-anchor href="#" appearance="hypertext">Tomato Bread Soup with Steamed Mussels</fast-anchor></li>
+                <li><fast-anchor href="#" appearance="hypertext">Grilled Fish with Artichoke Caponata</fast-anchor></li>
+                <li><fast-anchor href="#" appearance="hypertext">Celery Root and Mushroom Lasagna</fast-anchor></li>
+                <li><fast-anchor href="#" appearance="hypertext">Osso Buco with Citrus Gremolata</fast-anchor></li>
+            </ol>
+        </fast-tab-panel>
+        <fast-tab-panel id="dessertsPanel">
+            <ol>
+                <li><fast-anchor href="#" appearance="hypertext">Tiramisu</fast-anchor></li>
+                <li><fast-anchor href="#" appearance="hypertext">Spumoni</fast-anchor></li>
+                <li><fast-anchor href="#" appearance="hypertext">Limoncello and Ice Cream with Biscotti</fast-anchor></li>
+            </ol>
+        </fast-tab-panel>
+    </fast-tabs>
+</fast-design-system-provider>
+</div>
+<div class="p-6">
+  <fast-design-system-provider use-defaults>
+    <fast-text-area placeholder="Describe your experience">How was your stay?</fast-text-area>
+</fast-design-system-provider>
+</div>
+<div class="p-6">
+  <fast-design-system-provider use-defaults>
+    <fast-text-field appearance="filled" placeholder="user@email.com">Email</fast-text-field>
+</fast-design-system-provider>
+</div>
+<div class="p-6">
+  <fast-design-system-provider use-defaults>
+    <fast-button id="mybutton">
+       Hover me for more info
+    </fast-button>
+    <fast-tooltip anchor="mybutton" position="right">
+      helpful text
+    </fast-tooltip>
+</fast-design-system-provider>
+</div>
+<div class="p-12">
+  <fast-design-system-provider>
+    <fast-tree-view>
+        Root
+        <fast-tree-item>
+            Item 1
+            <fast-tree-item>Sub-item 1</fast-tree-item>
+            <fast-tree-item>Sub-item 2</fast-tree-item>
+        </fast-tree-item>
+        <fast-tree-item>Item 2</fast-tree-item>
+    </fast-tree-view>
+  </fast-design-system-provider>
+</div>
+
+<div class="p-6">
+
+</div>
+<div class="p-6">
+
+</div>
+
+<div class="p-6">
+
+</div>
+<div class="p-6">
+
+</div>
+
+<div class="p-6">
+
+</div>
+
+
+
+
+
+<div class="p-6">
+  <fast-design-system-provider use-defaults>
+    <fast-select id="shirt-size">
+      <fast-option value="s">Small</fast-option>
+      <fast-option value="m">Medium</fast-option>
+      <fast-option value="l">Large</fast-option>
+      <fast-option value="xl">Extra Large</fast-option>
+    </fast-select>
+
+    <fast-select value.bind="testVar" placeholder="genre">
+      <fast-option value="" disabled hidden selected>Layer</fast-option>
+      <fast-option model.bind="null">All</fast-option>
+      <fast-option repeat.for="layer of layers" value.bind="layer">${layer}</fast-option>
+    </fast-select>
+  </fast-design-system-provider>
+</div>
+<div class="p-6">
+  <fast-skeleton
+  style="
+      --neutral-fill-rest: #e1dfdd;
+      border-radius: 4px;
+      width: 50px;
+      height: 50px;
+  "
+  shape="circle"
+></fast-skeleton>
+<fast-skeleton
+    style="
+        --neutral-fill-rest: #e1dfdd;
+        border-radius: 4px;
+        width: 500px;
+        height: 250px;
+    "
+    shape="rect"
+    pattern="https://static.fast.design/assets/skeleton-test-pattern.svg"
+    shimmer
+></fast-skeleton>
+<fast-skeleton
+    style="
+        --neutral-fill-rest: #e1dfdd;
+        border-radius: 4px;
+        width: 500px;
+        height: 250px;
+    "
+    shape="rect"
+    shimmer
+>
+    <svg
+        style="position: absolute; left: 0; top: 0;"
+        id="pattern"
+        width="100%"
+        height="100%"
+    >
+        <defs>
+            <mask id="mask" x="0" y="0" width="100%" height="100%">
+                <rect x="0" y="0" width="100%" height="100%" fill="#ffffff" />
+                <rect x="0" y="0" width="100%" height="45%" rx="4" />
+                <rect x="25" y="55%" width="90%" height="15px" rx="4" />
+                <rect x="25" y="65%" width="70%" height="15px" rx="4" />
+                <rect x="25" y="80%" width="90px" height="30px" rx="4" />
+            </mask>
+        </defs>
+        <rect
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            mask="url(#mask)"
+            fill="#ffffff"
+        />
+    </svg>
+</fast-skeleton>
+</div>
+
+</template>

@@ -1,0 +1,25 @@
+<import from="./welcome-page"></import>
+<import from="./about-page.html"></import>
+
+
+<import from="./tailwind1-page"></import>
+<import from="./tailwind2-page"></import>
+
+<import from="./grid"></import>
+<import from="./fast"></import>
+<!-- <require from='../components/navbar/navbar.html'></require>	<require from='./components/navbar/navbar.html'></require> -->
+
+
+<nav>
+  <a load="welcome-page">Welcome</a>
+
+  <a load="tailwind1-page">Tailwind1</a>
+  <a load="tailwind2-page">Tailwind2</a>
+ 
+  
+  <a load="fast">Fast</a>
+
+  <a load="grid">au-ux Grid </a>
+</nav>
+
+<au-viewport default="welcome-page" fallback="missing-page"></au-viewport>
