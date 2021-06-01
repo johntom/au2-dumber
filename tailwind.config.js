@@ -93,6 +93,7 @@ module.exports = {
   },
 
   variants: {
+    backgroudColor:['responsive',  'hover','focus','active'],
     animation: ['responsive', 'motion-safe', 'motion-reduce', 'hover']
   },
 

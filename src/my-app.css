@@ -3,8 +3,25 @@
 @tailwind utilities;
 /* @tailwind "animate.css/animate";  */
 
+/* color: #007bff;
+text-decoration: none;
+background-color: white; */
 
+/* .a {
+  color:whte;
+ 
+}
 
+.navbar-nav li.loader {
+  color: #FFF;
+  
+  margin: 12px 24px 0 6px;
+}
+
+a:hover {
+  color: #9feb48;
+  text-decoration: underline;
+} */
 .btn {
   @apply text-base font-medium rounded-lg p-3;
 }
@@ -63,10 +80,6 @@
 }
 /* color, font, text, 100% width, etc. */
 
-
-.navbar-nav li.loader {
-  margin: 12px 24px 0 6px;
-}
 
 
 .spin {
