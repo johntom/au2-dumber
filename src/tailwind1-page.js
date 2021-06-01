@@ -58,7 +58,11 @@ export class Tailwind1Page {
   //     }
   //   });
   // };
+  // async setactive() {
 
+  //   this.element.classList.add('active');
+
+  // }
   async attached() {
     // alert('in a')
 

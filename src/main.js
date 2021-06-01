@@ -1,13 +1,14 @@
 import Aurelia, { RouterConfiguration } from 'aurelia';
 import { MyApp } from './my-app';
-import * as UxComponents from 'ux';
+// import * as UxComponents from 'ux';
 import {
   FASTDesignSystemProvider,
   FASTCard,
   FASTButton,
   FASTTextField,
   FASTTextArea,
-  FASTCheckbox
+  FASTCheckbox,
+  FASTDialog
 } from '@microsoft/fast-components';
 import { AureliaFastAdapter } from './aurelia-fast-adapter';
 
@@ -17,6 +18,8 @@ FASTButton;
 FASTTextField;
 FASTTextArea;
 FASTCheckbox;
+FASTDialog;
+
   //  '@aurelia-ux/core';
   // '@aurelia-ux/components';
   // '@aurelia-ux/input';
@@ -39,7 +42,7 @@ Aurelia
 
   .register(RouterConfiguration)
   .register(AureliaFastAdapter) // add this line
-  .register( UxComponents )
+  // .register( UxComponents ) not avail for 2.0
   // To use HTML5 pushState routes, replace previous line with the following
   // customized router config.
   // .register(RouterConfiguration.customize({ useUrlFragmentHash: false }))

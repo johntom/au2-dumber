@@ -21,9 +21,18 @@
     }
   </style>
 <h1>${message}</h1>
+Dialog
 <div class="p-6">
-
   <fast-design-system-provider use-defaults>
+  
+  <fast-dialog id="example1" class="example-dialog" aria-label="Simple modal dialog" modal="true" hidden>
+    <h2>Dialog</h2>
+    <p>This is an example dialog.</p>
+    <fast-button>Close Dialog</fast-button>
+</fast-dialog>
+</div>
+  
+<fast-design-system-provider use-defaults>
 
     <my-element></my-element>
 
@@ -33,14 +42,15 @@
     </fast-card>
   </fast-design-system-provider>
 </div>
-<div class="p-6">
+<!-- <div class="p-12">
+   -->
+  
   <fast-design-system-provider use-defaults>
     <fast-accordion>
         <fast-accordion-item expanded>
             <span slot="heading">Panel one</span>
        
-            Panel one content
-           <ul>
+            Panel one content 
 <li>111</li>
 <li>222</li>
 <li>333</li>
@@ -56,6 +66,7 @@
             Panel three content
         </fast-accordion-item>
     </fast-accordion>
+
 </fast-design-system-provider>
 </div>
 <div class="p-6">

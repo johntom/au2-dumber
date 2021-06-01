@@ -3,3 +3,12 @@ yarn run start
 git add .
 git commit "rel x"
 git push
+
+for GCP
+
+
+@REM 1 yarn r
+
+rem 2 gcloud init  mrg-server-staging 
+rem 3 gcloud  app deploy
+rem 4 gcloud app browse
