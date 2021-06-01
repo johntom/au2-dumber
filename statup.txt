@@ -16,3 +16,6 @@ rem 4 gcloud app browse
 git add .
 git commit -m"#8 " 
 git push
+
+npm o -g live-server
+live-server public
