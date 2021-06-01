@@ -1,1 +1,5 @@
 yarn run start  
+
+git add .
+git commit "rel x"
+git push
