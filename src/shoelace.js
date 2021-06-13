@@ -54,10 +54,7 @@ export class Shoelace {
     // slRadioGroup.addEventListener('sl-change', (event) => console.log('slRadioGroup',event.srcElement.value));
     slRadioGroup.addEventListener('sl-change', (event) => {
       for (let i = 0; i < slRadioGroup.childElementCount; i++) {
-        // console.log(' i ',event,i,slRadioGroup.children[i].checked)//..value)
-        // console.log(slRadioGroup.children[i].checked ?  slRadioGroup.children[i].textContent : "")
-        // console.log(slRadioGroup.children[i].checked ?  slRadioGroup.children[i].textContent : "")
-        if (slRadioGroup.children[i].checked) {
+             if (slRadioGroup.children[i].checked) {
           console.log(slRadioGroup.children[i].textContent)
           this.selectedopt = slRadioGroup.children[i].textContent
         }
@@ -66,24 +63,6 @@ export class Shoelace {
 
     })
 
-    // const     slRadio = document.querySelector('sl-radio');
-    // slRadio.addEventListener('sl-change', (event) => console.log('slRadio',event.srcElement.value));
-
-    //jrt
-    //  const slRadio = document.querySelectorAll("slRadio")
-    //   // log = <HTMLElement>document.querySelector("#log");
-    //   // const     slRadioGroup = document.querySelector('sl-radio-group');
-
-    //   // slRadioGroup.addEventListener('sl-change', (event) => console.log('slRadioGroup',event.srcElement.value));
-    //  const slRadioGroup = document.querySelectorAll("sl-radio-group")
-
-    //     for (let i = 0; i < slRadioGroup[0].children.length-1; i++) {
-    //       slRadioGroup[i].addEventListener('sl-change', function (event) {
-    //         console.log(i,event.target.checked ? 'slSwitch checked' : 'slSwitch not checked');
-    //             // const checkStatus = event.detail.value;
-    //             // console.log(event.target.innerHTML + " is checked");
-    //         });
-    //     }
 
 
     const slSwitch = document.querySelector('sl-switch');
@@ -134,6 +113,24 @@ export class Shoelace {
 
   }
 }
+    // const     slRadio = document.querySelector('sl-radio');
+    // slRadio.addEventListener('sl-change', (event) => console.log('slRadio',event.srcElement.value));
+
+    //jrt
+    //  const slRadio = document.querySelectorAll("slRadio")
+    //   // log = <HTMLElement>document.querySelector("#log");
+    //   // const     slRadioGroup = document.querySelector('sl-radio-group');
+
+    //   // slRadioGroup.addEventListener('sl-change', (event) => console.log('slRadioGroup',event.srcElement.value));
+    //  const slRadioGroup = document.querySelectorAll("sl-radio-group")
+
+    //     for (let i = 0; i < slRadioGroup[0].children.length-1; i++) {
+    //       slRadioGroup[i].addEventListener('sl-change', function (event) {
+    //         console.log(i,event.target.checked ? 'slSwitch checked' : 'slSwitch not checked');
+    //             // const checkStatus = event.detail.value;
+    //             // console.log(event.target.innerHTML + " is checked");
+    //         });
+    //     }
 
 
   //   const form = document.querySelector('.form-overview');

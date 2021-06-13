@@ -58,8 +58,7 @@
 
 <div class="p-4">
   Shoelace
-  <sl-button>Click me</sl-button>
-  <sl-button click.trigger="onClick()">Shoelace Click me</sl-button>
+   <sl-button click.trigger="onClick()">Shoelace Click me check name</sl-button>
 
   <sl-color-picker></sl-color-picker>
 
@@ -173,16 +172,6 @@ you selected   ${slist}
     </sl-alert>
   </div>
 
-  <!-- <script>
-    const container = document.querySelector('.alert-toast');
-  
-    ['primary', 'success', 'info', 'warning', 'danger'].map(type => {
-      const button = container.querySelector(`sl-button[type="${type}"]`);
-      const alert = container.querySelector(`sl-alert[type="${type}"]`);
-  
-      button.addEventListener('click', () => alert.toast());
-    });
-  </script>  -->
   <sl-drawer label="Drawer" placement="start" class="drawerl-placement-start">
     This drawer slides in from the start.
     <sl-button slot="footer" type="primary">Close</sl-button>
@@ -212,11 +201,7 @@ you selected   ${slist}
 
   <sl-drawer label="Drawer" placement="top" class="drawer-placement-top">
     This drawer slides in from the top.
-    <!-- <sl-radio-group label="Select an option" no-fieldset>
-      <sl-radio value="1" checked>Option 1</sl-radio>
-      <sl-radio value="2">Option 2</sl-radio>
-      <sl-radio value="3">Option 3</sl-radio>
-    </sl-radio-group> -->
+    
     <sl-button slot="footer" type="primary">Close</sl-button>
   </sl-drawer>
   <sl-button>Open Drawer top</sl-button>
@@ -230,13 +215,6 @@ you selected   ${slist}
   <sl-button>Open Drawer right</sl-button>
 
 
-  <!-- <sl-radio-group label="Select an option" no-fieldset>
-    <sl-radio value="1" checked>Option 1</sl-radio>
-    <sl-radio value="2">Option 2</sl-radio>
-    <sl-radio value="3">Option 3</sl-radio>
-  </sl-radio-group> -->
-
-  <!-- <sl-radio-group label='Select an option '+${selectedopt} > -->
     <sl-radio-group label='Select an option ' >
  
     <sl-radio value="1" >Option 1</sl-radio>
@@ -250,7 +228,7 @@ you selected   ${slist}
   <sl-input placeholder="Clearable" clearable value.bind="firstname"  ></sl-input>
   <!-- <sl-input name="firstname" value.bind="firstname" data-bind="firstname"></sl-input> -->
   ${firstname}
-  <!-- breaks code <sl-input  value.two-way="firstname"></sl-input> -->
+  <sl-button click.trigger="onClick()">Shoelace Click me check name</sl-button>
 
 
 </div>
