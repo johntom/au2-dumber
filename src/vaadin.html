@@ -1,0 +1,212 @@
+<style>
+  vaadin-button {
+    margin-bottom: 20px;
+  }
+
+
+
+
+  .details {
+    display: flex;
+    font-size: 20px;
+  }
+
+  img {
+    width: 180px;
+    height: 180px;
+    margin: 20px;
+  }
+
+  .img2 {
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+  }
+</style>
+<div class="p-4">
+  Vaadin combo  pickfruit : ${pickfruit} 
+<br>
+  span <span value.bind="pickfruit"></span>
+  <vaadin-combo-box label="Fruit" allow-custom-value></vaadin-combo-box>
+  <p>Selected value:<span> </span></p>
+
+  <button id="tt" click.delegate="onClick()">Click </button>
+ <br>
+ <button id="tt"2 click.delegate="onClick2()">Click </button>
+ <br>
+   <vaadin-button id="add-btn">Add Item</vaadin-button>
+  <vaadin-button id="remove-btn">Remove Item</vaadin-button>
+  <!-- <vaadin-grid aria-label="Content Renderer Function"  height-by-rows>
+    <vaadin-grid-column width="60px" flex-grow="0" text-align="end"></vaadin-grid-column>
+    <vaadin-grid-selection-column auto-select></vaadin-grid-selection-column>
+    <vaadin-grid-column></vaadin-grid-column>
+    <vaadin-grid-column></vaadin-grid-column>
+    <vaadin-grid-column></vaadin-grid-column>
+    <vaadin-grid-column width="8em">
+      <template class="header">Address Template</template>
+      <template>
+        <div style="color: aliceblue; background:blueviolet;white-space: normal;">[[item.location.street]], [[item.location.city]]</div>
+      </template>
+      <template class="footer">Address</template>
+    </vaadin-grid-column>
+    <vaadin-grid-column width="8em"></vaadin-grid-column>
+  </vaadin-grid>
+  <dom-bind>
+    <template>
+      <x-data-provider data-provider="{{users2}}"></x-data-provider>
+  
+      <vaadin-grid aria-label="Selection using Templates Example" data-provider="[[users2]]" size="200">
+        <vaadin-grid-column width="60px" flex-grow="0">
+          <template class="header">#</template>
+          <template>[[index]]</template>
+        </vaadin-grid-column>
+  
+        <vaadin-grid-column>
+          <template class="header">First name</template>
+          <template>[[item.name.first]]</template>
+        </vaadin-grid-column>
+  
+        <vaadin-grid-column>
+          <template class="header">Last name</template>
+          <template>[[item.name.last]]</template>
+        </vaadin-grid-column>
+  
+        <vaadin-grid-column>
+          <template>
+            <vaadin-checkbox aria-label="Select Row" checked="{{selected}}">Selected</vaadin-checkbox>
+          </template>
+        </vaadin-grid-column>
+      </vaadin-grid>
+    </template>
+  </dom-bind> -->
+  <!-- <vaadin-checkbox>Enable Multi-Sorting</vaadin-checkbox>
+  <vaadin-grid aria-label="Sorting Example">
+    <vaadin-grid-sort-column path="name.first" header="First name"></vaadin-grid-sort-column>
+    <vaadin-grid-sort-column path="name.last" header="Last name"></vaadin-grid-sort-column>
+    <vaadin-grid-sort-column path="email"></vaadin-grid-sort-column>
+  </vaadin-grid> 
+
+  <vaadin-grid  id="g2"></vaadin-grid-column> aria-label="Filtering Example">
+     <vaadin-grid-sort-column path="name.first" header="First name"></vaadin-grid-sort-column>
+
+      <vaadin-grid-sort-column path="name.last" header="Last name"></vaadin-grid-sort-column>
+       <vaadin-grid-filter-column path="name.last" header="Last name"></vaadin-grid-filter-column>
+    <vaadin-grid-filter-column path="email" header="Email"></vaadin-grid-filter-column>-->
+
+  <!-- <vaadin-grid-column path="email" id="email"></vaadin-grid-column> -->
+  <!-- </vaadin-grid>  -->
+
+
+
+<!-- 
+  <dom-bind>
+    <template>
+      <x-data-provider data-provider="{{users}}"></x-data-provider>
+
+      <vaadin-grid active-item="{{activeItem}}" aria-label="Row Details Example" data-provider="[[users]]" size="400">
+
+        <template class="row-details">
+          <div class="details">
+            <img src="[[item.picture.large]]">
+            <p>
+              <span>Hi! My name is [[item.name.first]]!</span><br>
+              <small>[[item.email]]</small>
+            </p>
+            <img class="img2" src="[[item.picture.small]]">
+          </div>
+        </template>
+
+        <vaadin-grid-column width="60px" flex-grow="0">
+          <template class="header">#</template>
+          <template>[[index]]</template>
+        </vaadin-grid-column>
+
+        <vaadin-grid-sort-column path="name.first" header="First name"></vaadin-grid-sort-column>
+        <vaadin-grid-sort-column path="name.last" header="last name"></vaadin-grid-sort-column>
+   
+        <vaadin-grid-filter-column path="name.last" header="Last name"></vaadin-grid-filter-column>
+
+        <vaadin-grid-column width="100px">
+          <template class="header"></template>
+          <template>
+            <vaadin-checkbox aria-label$="Show Details for [[item.name.first]]" checked="{{detailsOpened}}">Show Details
+            </vaadin-checkbox>
+          </template>
+        </vaadin-grid-column>
+
+      </vaadin-grid>
+    </template>
+  </dom-bind>
+  <dom-bind>
+    <template>
+      <x-data-provider data-provider="{{user2}}"></x-data-provider>
+
+      <vaadin-grid active-item="{{activeItem}}" aria-label="Row Details Example" data-provider="[[users2]]" size="400">
+
+        <template class="row-details">
+          <div class="details">
+            <img src="[[item.picture.large]]">
+            <p>
+              <span>Hi! My name is [[item.name.first]]!</span><br>
+              <small>[[item.email]]</small>
+            </p>
+            <img class="img2" src="[[item.picture.small]]">
+          </div>
+        </template>
+
+        <vaadin-grid-column width="60px" flex-grow="0">
+          <template class="header">#</template>
+          <template>[[index]]</template>
+        </vaadin-grid-column>
+
+        <vaadin-grid-sort-column path="name.first" header="First name"></vaadin-grid-sort-column>
+        <vaadin-grid-sort-column path="name.last" header="last name"></vaadin-grid-sort-column>
+   
+        <vaadin-grid-filter-column path="name.last" header="Last name"></vaadin-grid-filter-column>
+
+        <vaadin-grid-column width="100px">
+          <template class="header"></template>
+          <template>
+            <vaadin-checkbox aria-label$="Show Details for [[item.name.first]]" checked="{{detailsOpened}}">Show Details
+            </vaadin-checkbox>
+          </template>
+        </vaadin-grid-column>
+
+      </vaadin-grid>
+
+
+    </template>
+  </dom-bind> -->
+
+  <!-- <dom-bind>
+    <template>
+      <x-data-provider data-provider="{{users2}}"></x-data-provider>
+  
+      <vaadin-grid id='g2' aria-label="Selection using Templates Example" data-provider="[[users2]]" size="200">
+        <vaadin-grid-column width="60px" flex-grow="0">
+          <template class="header">#</template>
+          <template>[[index]]</template>
+        </vaadin-grid-column>
+  
+        <vaadin-grid-column>
+          <template class="header">First name</template>
+          <template>[[item.name.first]]</template>
+        </vaadin-grid-column>
+  
+        <vaadin-grid-column>
+          <template class="header">Last name</template>
+          <template>[[item.name.last]]</template>
+        </vaadin-grid-column>
+  
+        <vaadin-grid-column>
+          <template>
+            <vaadin-checkbox aria-label="Select Row" checked="{{selected}}">Selected</vaadin-checkbox>
+          </template>
+        </vaadin-grid-column>
+      </vaadin-grid>
+    </template>
+  </dom-bind>  -->
+
+
+
+</div>

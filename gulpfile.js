@@ -135,6 +135,7 @@ function buildCss(src) {
   // )
   return gulp.src(src, { sourcemaps: !isProduction })
     .pipe(postcss([
+     
       autoprefixer(),
       require('tailwindcss')('tailwind.config.js'),
       // use postcss-url to inline any image/font/svg.

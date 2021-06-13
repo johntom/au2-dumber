@@ -111,6 +111,6 @@ module.exports = {
       },
       variants: ['responsive', 'hover', 'reduced-motion'],
     }),
-
+    require('@tailwindcss/forms'),
   ],
 }
