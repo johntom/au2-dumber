@@ -21,3 +21,15 @@ D:\Aurelia2\Dumber\dumber1  (dumber1@0.1.0)
                                                                          
 D:\Aurelia2\Dumber\dumber1  (dumber1@0.1.0)                              
                                                                        
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/johntom/aurelia2-table-dumber.git
+git push -u origin main
+
+
+git add .
+git commit -m "first commit"
+git push
