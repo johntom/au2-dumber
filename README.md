@@ -10,11 +10,14 @@ Aurelia2-Table fails to load
 ## Start dev web server
 
     npm start
-
+    or
+    yarn run start
 ## Build the app in production mode
 
     npm run build
     or
-    yarn run start
+    yarn run build
+
+   
 
 
