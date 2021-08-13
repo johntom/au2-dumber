@@ -22,10 +22,7 @@ const purgecss = require("gulp-purgecss");
  
 // Read more in https://dumber.js.org
 const dr = dumber({
-  // src folder is by default "src".
-  // src: 'src',
-
-  // requirejs baseUrl, dumber default is "/dist"
+  
   baseUrl: '/' + dist,
 
   // can turn off cache for production build
@@ -37,32 +34,7 @@ const dr = dumber({
   // Turn on hash for production build
   hash: isProduction,
 
-  // Note prepend/append only affects entry bundle.
-
-  // prepend before amd loader.
-  // dumber-module-loader is injected automatically by dumber bundler after prepends.
-  // prepend: [],
-
-
-  // Explicit dependencies, can use either "deps" (short name) or "dependencies" (full name).
-  // deps: [],
-
-  // Code split is intuitive and flexible.
-  // https://dumber.js.org/options/code-split
-  //
-  // You provide a function to return a bundle name for every single module.
-  // The function takes two parameters:
-  //
-  // moduleId:
-  //   for local src file "src/foo/bar.js", the module id is "foo/bar.js"
-  //   for local src file "src/foo/bar.css" (or any other non-js file), the module id is "foo/bar.css"
-  //   for npm package file "node_modules/foo/bar.js", the module id is "foo/bar.js"
-  //   for npm package file "node_modules/@scoped/foo/bar.js", the module id is "@scoped/foo/bar.js"
-  //
-  // packageName:
-  //   for any local src file, the package name is undefined
-  //   for npm package file "node_modules/foo/bar.js", the package name is "foo"
-  //   for npm package file "node_modules/@scoped/foo/bar.js", the package name is "@scoped/foo"
+ 
 
   // Here we skip code splitting in test mode.
   codeSplit: isTest ? undefined : function (moduleId, packageName) {
@@ -73,17 +45,6 @@ const dr = dumber({
     // this means no module can skip bundling.
   },
 
-  // onManifest is an optional callback, it provides a file name map like:
-  // {
-  //   "some-bundle.js": "some-bundle.1234.js",
-  //   "other-bundle.js": "other-bundle.3455.js"
-  // }
-  // Or when hash is off
-  // {
-  //   "some-bundle.js": "some-bundle.js",
-  //   "other-bundle.js": "other-bundle.js"
-  // }
-  // If you turned on hash, you need this callback to update index.html
   onManifest: isTest ? undefined : function (filenameMap) {
     // Update index.html entry.bundle.js with entry.bundle.hash...js
     console.log('Update index.html with ' + filenameMap['entry.bundle.js']);
@@ -107,32 +68,10 @@ function buildHtml(src) {
     .pipe(au2());
 }
 
-// function buildCss(src) {
-//   return gulp.src(src, { sourcemaps: !isProduction })
-  
-//     .pipe(postcss([
-//       autoprefixer(),
-//       // use postcss-url to inline any image/font/svg.
-//       // postcss-url by default use base64 for images, but
-//       // encodeURIComponent for svg which does NOT work on
-//       // some browsers.
-//       // Here we enforce base64 encoding for all assets to
-//       // improve compatibility on svg.
-//       postcssUrl({ url: 'inline', encodeType: 'base64' })
-//     ]));
-// }
+
 
 function buildCss(src) {
-  // return gulp.src(src, { sourcemaps: !isProduction })
-  // return gulp
-  // .src(src, { sourcemaps: !isProduction })
-  // .pipe(
-  //   // add PurgeCSS to remove unused CSS
-  //   purgecss({
-  //     content: ["src/**/*.html", "_index.html"],
-  //     whitelist: ["goto-active"],
-  //   })
-  // )
+
   return gulp.src(src, { sourcemaps: !isProduction })
     .pipe(postcss([
      
@@ -147,29 +86,6 @@ function buildCss(src) {
       postcssUrl({ url: 'inline', encodeType: 'base64' })
     ]));
 }
-
-// function buildCss(src) {
-//   // return gulp.src(src, { sourcemaps: !isProduction })
-//   return gulp
-//   .src(src, { sourcemaps: !isProduction })
-//   .pipe(
-//     // add PurgeCSS to remove unused CSS
-//     purgecss({
-//       content: ["src/**/*.html", "_index.html"],
-//       whitelist: ["goto-active"],
-//     })
-//   )
-//     .pipe(postcss([
-//       autoprefixer(),
-//       // use postcss-url to inline any image/font/svg.
-//       // postcss-url by default use base64 for images, but
-//       // encodeURIComponent for svg which does NOT work on
-//       // some browsers.
-//       // Here we enforce base64 encoding for all assets to
-//       // improve compatibility on svg.
-//       postcssUrl({ url: 'inline', encodeType: 'base64' })
-//     ]));
-// }
 
 function build() {
   // Merge all js/css/html file streams to feed dumber.
@@ -220,9 +136,7 @@ function reload(done) {
 }
 
 // Watch all files for rebuild and reload browserSync.
-// function watch() {
-//   gulp.watch('src/**/*', gulp.series(build, reload));
-// }
+
 function watch() {
   return gulp.watch(["src/**/*", "resources/**/*"], gulp.series(build, reload));
 }
@@ -235,27 +149,3 @@ exports.run = run;
 exports.default = run;
 
  
-// then we add PurgeCSS to the CSS build
-// function buildCss(src) {
-//   return gulp
-//     .src(src, { sourcemaps: !isProduction })
-//     .pipe(
-//       // add PurgeCSS to remove unused CSS
-//       purgecss({
-//         content: ["src/**/*.html", "_index.html"],
-//         whitelist: ["goto-active"],
-//       })
-//     )
-//     .pipe(
-//       postcss([
-//         autoprefixer(),
-//         // use postcss-url to inline any image/font/svg.
-//         // postcss-url by default use base64 for images, but
-//         // encodeURIComponent for svg which does NOT work on
-//         // some browsers.
-//         // Here we enforce base64 encoding for all assets to
-//         // improve compatibility on svg.
-//         postcssUrl({ url: "inline", encodeType: "base64" }),
-//       ])
-//     );
-// }

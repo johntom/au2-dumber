@@ -1,36 +1,15 @@
 <!-- <import from="../components/navbar/navbar"></import> -->
 
+
 <import from="./welcome-page"></import>
-<import from="./about-page.html"></import>
 
 
-<import from="./tailwind1-page"></import>
-<import from="./tailwind2-page"></import>
-<import from="./tailwind3-page.html"></import>
+<import from="./autable1"></import>
 
-<import from="./grid"></import>
-<import from="./fast"></import>
-<!-- <import from="./shoelace/shoelace"></import> -->
-<import from="./shoelace"></import>
-<import from="./shoelace2"></import>
-<import from="./spectrum"></import>
 
-<import from="./vaadin"></import>
 
 <style>
-  /* #Mega Menu Styles
-if you use sass, convert all this additional css to tailwindcss using the 'hack' @apply for all element.style (css properties)
-[ https://tailwindcss.com/docs/functions-and-directives/#apply ]
-example:
-.mega-menu {
-@apply
-hidden
-left-0
-absolute
-text-left
-w-full;
-}
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
   .mega-menu {
     display: none;
     left: 0;
@@ -146,50 +125,17 @@ w-full;
           </div>
           <div class="hidden sm:block sm:ml-6">
             <div class="flex space-x-4">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <!-- <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a> -->
-              <!--   <a class="hover:bg-indigo-400 active:bg-fuchsia-500" load="tailwind2-page">Tailwind2</a>
- class: ["blue", ("active" if request.path == account_path)]          -->
-              <!--Active: "bg-gray-100", Not Active: ""  Active= "bg-bluey-100" Not Active= "" <a href="#" Active: "bg-gray-100", Not Active: ""  class="['blue', ('active' if request.path == account_path)] bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page" load="welcome-page">Welcome</a>  -->
-              <!-- <a href="#" Active="bg-bluey-100" , Not Active: ""
-                class="['blue', ('active' if request.path == account_path)] bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                aria-current="page" load="welcome-page">Welcome</a>
-                <a class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" load="fast">Fast</a> -->
-                <a class=" hover:bg-indigo-400 active:bg-fuchsia-500 bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                load="welcome-page">welcome-page</a>
-              <a class=" hover:bg-indigo-400 active:bg-fuchsia-500 bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                load="tailwind1-page">Tailwind1</a>
               <a class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                load="tailwind2-page">Tailwind2</a>
-              <a class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                load="tailwind3-page">Tailwind3</a>
-                <a class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                load="shoelace">Shoelace</a>
-                <a class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                load="shoelace2">Shoelace2</a>
-                <a class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                load="vaadin">vaadin</a>
-   <!-- <a class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                load="shoelace/shoelace">Shoelace</a> -->
+              load="welcome-page">welcome-page</a>
 
-<!-- 
                 <a class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                load="spectrum">spectrum</a>
+                load="autable1">autable</a>
 
- 
-                 -->
-                
              
-                <!-- 
-              <a href="#" load="tailwind3-page"
-                class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-pink-600">
-                <i class="fas fa-link pr-0 md:pr-3 text-pink-500"></i><span
-                  class="pb-1 md:pb-0 text-xs md:text-base text-white md:font-bold block md:inline-block">Active
-                  Link</span>
-              </a> -->
 
+                
 
-            </div>
+           </div>
           </div>
 
  
@@ -218,22 +164,7 @@ w-full;
               <!-- </button> -->
             </div>
 
-            <!--
-            Dropdown menu, show/hide based on menu state.
-
-            Entering: "transition ease-out duration-100"
-              From: "transform opacity-0 scale-95"
-              To: "transform opacity-100 scale-100"
-            Leaving: "transition ease-in duration-75"
-              From: "transform opacity-100 scale-100"
-              To: "transform opacity-0 scale-95"
-          -->
-            <!-- <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1"> -->
-            <!-- Active: "bg-gray-100", Not Active: "" -->
-            <!-- <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a> -->
-            <!-- </div> -->
+        
           </div>
         </div>
       </div>

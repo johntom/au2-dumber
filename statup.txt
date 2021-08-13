@@ -9,7 +9,7 @@ for GCP
 
 @REM 1 yarn r
 
-rem 2 gcloud init  mrg-server-staging 
+rem 2 gcloud init  
 rem 3 gcloud  app deploy
 rem 4 gcloud app browse
 

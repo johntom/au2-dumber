@@ -40,6 +40,11 @@ a:hover {
 .btn--default {
   @apply bg-fuchsia-600 text-white;
 }
+
+.btn--alert {
+  @apply  bg-rose-500 text-white;
+}
+
 /* color, font, text, 100% width, etc. */
 /* Use opacity to achieve the fade-in/out effect. */
 
@@ -68,7 +73,7 @@ a:hover {
   box-sizing: border-box;
 }
 
-.item {
+/* .item {
   width: 200px;
   height: 200px;
   margin: 50px auto;
@@ -77,7 +82,7 @@ a:hover {
   text-align: center;
   color: #FFF;
   font-size: 3em;
-}
+} */
 /* color, font, text, 100% width, etc. */
 
 
